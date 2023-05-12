@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>错误监控</title>
+</head>
+
+<body>
+  <div id="app"></div>
+  <!-- <img src="https://yun.tuia.cn/image/kkk.png">
+  <script src="https://yun.tuia.cn/foundnull.js"></script>
+  <link href="https://yun.tuia.cn/foundnull.css" rel="stylesheet" /> -->
+  <!-- <script src="./dist/cmonitor.min.js"></script> -->
+  <!-- <script src="./dist/cmonitor.es.min.js"></script> -->
+  <script src="https://unpkg.com/axios"></script>
+  <script src="https://unpkg.com/vue"></script>
+
+  <!-- <img src="https://yun.tuia.cn/image/kkk.png"> -->
+
+  <!-- <script>
+      const cm = require("./dist/cmonitor.umd.min.js");
+
+      console.log("cm", cm);
+    </script> -->
+  <script type="module">
+    // import {createApp} from "vue";
+    import CMonitor from "./dist/index.mjs";
+
+    // console.log("CMonitor", CMonitor);
+
+    /**  vue3中使用 */
+
+    const App = {
+      setup() {
+        // console.log(note);
+        // fetch('https://tuia.cn/test');
+        // axios.get("https://tuia.cn/test");
+        CMonitor.notify({ name: 'custom_info', message: '我爱喝哇哈哈哈', businessName: 'iho-expense' });
+        return {
+          // data
+        };
+      },
+    };
+    const app = Vue.createApp(App);
+    CMonitor.init({
+      disable: 1,
+      appkey: "49e91c82bab41ac59bc1efc798df720f",
+    });
+    app.config.errorHandler = (err, instance, info) => {
+
+      CMonitor.notify(err);
+
+    };
+    // app.use(axios);
+    app.mount("#app");
+  </script>
+  <!-- <img src="https://yun.tuia.cn/image/kkk.png">
+  <script src="https://yun.tuia.cn/foundnull.js"></script>
+  <link href="https://yun.tuia.cn/foundnull.css" rel="stylesheet" /> -->
+  <!-- <script>
+
+
+    /** 浏览器使用   */
+    CMonitor.init({
+      disable: 1,
+      appkey: "49e91c82bab41ac59bc1efc798df720f",
+      uploadUrl: "http://localhost:7001/sdk/commit"
+    })
+
+
+    // setTimeout(() => {
+    //   // Promise.resolve(() => {
+    //   console.log(notdefined);
+    //   // })
+
+    // }, 100)
+    // setTimeout(() => {
+    //   console.log(notdefined);
+    // }, 0)
+
+    console.log(notdefined);
+    // nodefined
+    // const person = void 0
+    // person.name
+    // (function fn() { fn() })()
+    // axios.get('https://tuia.cn/test')
+    // Promise.resolve().then(() => {
+    //   fetch('https://tuia.cn/test')
+    // })
+
+    // fetch('https://tuia.cn/test')
+
+
+
+
+    /**  vue3中使用 */
+
+    const App = {
+      setup() {
+        axios.get('https://tuia.cn/test')
+        return {
+          data
+        };
+      },
+    };
+    const app = Vue.createApp(App);
+    CMonitor.init({
+      disable: 1,
+      appkey: "49e91c82bab41ac59bc1efc798df720f",
+      uploadUrl: "http://localhost:7001/sdk/commit"
+    });
+    app.config.errorHandler = (err, instance, info) => {
+      console.log('vue3-err', err, instance, info)
+      CMonitor.notify(err)
+    }
+    // app.use(axios);
+    app.mount("#app");
+  </script> -->
+
+  <div style="height: 9999px">http://test.com</div>
+  <!-- <script src="https://yun.tuia.cn/foundnull.js"></script> -->
+
+  <script>
+      // window.onerror = function (message, url, line, column, error) {
+      //   console.log(message, url, line, column, error);
+      // }
+  </script>
+</body>
+
+</html>
