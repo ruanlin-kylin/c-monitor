@@ -13,7 +13,7 @@
   <!-- <img src="https://yun.tuia.cn/image/kkk.png">
   <script src="https://yun.tuia.cn/foundnull.js"></script>
   <link href="https://yun.tuia.cn/foundnull.css" rel="stylesheet" /> -->
-  <!-- <script src="./dist/cmonitor.min.js"></script> -->
+  <script src="./dist/index.js"></script>
   <!-- <script src="./dist/cmonitor.es.min.js"></script> -->
   <script src="https://unpkg.com/axios"></script>
   <script src="https://unpkg.com/vue"></script>
@@ -25,19 +25,19 @@
 
       console.log("cm", cm);
     </script> -->
-  <script type="module">
+  <!-- <script type="module">
     // import {createApp} from "vue";
-    import CMonitor from "./dist/index.mjs";
+    // import CMonitor from "./dist/index.mjs";
 
-    // console.log("CMonitor", CMonitor);
+    console.log("CMonitor", CMonitor);
 
     /**  vue3中使用 */
 
     const App = {
       setup() {
-        // console.log(note);
-        // fetch('https://tuia.cn/test');
-        // axios.get("https://tuia.cn/test");
+        console.log(note);
+        fetch('https://tuia.cn/test');
+        axios.get("https://tuia.cn/test");
         CMonitor.notify({ name: 'custom_info', message: '我爱喝哇哈哈哈', businessName: 'iho-expense' });
         return {
           // data
@@ -56,11 +56,11 @@
     };
     // app.use(axios);
     app.mount("#app");
-  </script>
-  <!-- <img src="https://yun.tuia.cn/image/kkk.png">
+  </script> -->
+  <img src="https://yun.tuia.cn/image/kkk.png">
   <script src="https://yun.tuia.cn/foundnull.js"></script>
-  <link href="https://yun.tuia.cn/foundnull.css" rel="stylesheet" /> -->
-  <!-- <script>
+  <link href="https://yun.tuia.cn/foundnull.css" rel="stylesheet" />
+  <script>
 
 
     /** 浏览器使用   */
@@ -118,7 +118,7 @@
     }
     // app.use(axios);
     app.mount("#app");
-  </script> -->
+  </script>
 
   <div style="height: 9999px">http://test.com</div>
   <!-- <script src="https://yun.tuia.cn/foundnull.js"></script> -->

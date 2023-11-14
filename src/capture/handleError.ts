@@ -41,6 +41,7 @@ function reportResourceError(msg: parmas, data: any): void {
     type: "resourceError",
     data: {
       outerHTML: data.outerHTML,
+      message: data.message,
       src: data.src,
       tagName: data.localName?.toUpperCase(),
       occurTime: new Date().getTime(),

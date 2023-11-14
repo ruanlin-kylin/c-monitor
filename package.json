@@ -1,6 +1,6 @@
 {
   "name": "c-monitor",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "简单的前端异常收集sdk",
   "main": "dist/index.js",
   "module": "dist/index.mjs",

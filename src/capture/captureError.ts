@@ -19,8 +19,14 @@ export default function captureError() {
   //js错误，静态资源加载错误
   window.addEventListener(
     "error",
-    function (event: Event) {
-      handleErr(event.target, "resourceError");
+    function (event: ErrorEvent) {
+      const ignoreErrors = [
+        "ResizeObserver loop limit exceeded",
+        "ResizeObserver loop completed with undelivered notifications.",
+      ];
+      if (!ignoreErrors.includes(event.message)) {
+        handleErr(Object.assign(event.target, { message: event.message }), "resourceError");
+      }
     },
     true
   );
