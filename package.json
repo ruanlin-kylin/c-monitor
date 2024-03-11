@@ -1,6 +1,6 @@
 {
   "name": "c-monitor",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "简单的前端异常收集sdk",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -14,6 +14,14 @@
     "start": "tsc -p tsconfig.json",
     "build": "rollup -c "
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ruanlin-kylin/c-monitor"
+  },
+  "bugs": {
+    "url": "https://github.com/ruanlin-kylin/c-monitor/issues"
+  },
+  "homepage": "https://github.com/ruanlin-kylin/c-monitor#readme",
   "author": "ruanlin",
   "license": "ISC",
   "devDependencies": {

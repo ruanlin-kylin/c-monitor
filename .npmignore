@@ -4,4 +4,4 @@ src/
 # 忽略指定文件
 rollup.config.js
 tsconfig.js
-yarn.lock
+*.lock
